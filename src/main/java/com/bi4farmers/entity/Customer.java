@@ -1,4 +1,4 @@
-package com.mycompany.entity;
+package com.bi4farmers.entity;
 
 import java.util.Date;
 import java.util.Locale;
@@ -8,6 +8,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import lombok.Data;
+
+
 
 /**
  * Customer entity, representing a customer object that can be persisted to a
@@ -17,6 +21,7 @@ import javax.persistence.ManyToOne;
  * @author Nils Preusker - n.preusker@gmail.com
  */
 @Entity
+@Data
 public class Customer {
 
   @Id
@@ -30,9 +35,10 @@ public class Customer {
   private Sex sex;
   private String country;
   private Locale locale;
+  @Temporal(javax.persistence.TemporalType.DATE)
   private Date createDate;
   @ManyToOne(cascade = { CascadeType.ALL })
-  private Company company;
+  private Farm company;
 
   /**
    * Default constructor for JAX-RS (object <> JSON serialization)
@@ -42,7 +48,7 @@ public class Customer {
 
   public Customer(String firstName, String lastName, String email,
       String phone, String fax, Sex sex, String country, Locale locale,
-      Date createDate, Company company) {
+      Date createDate, Farm company) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.email = email;
@@ -137,12 +143,11 @@ public class Customer {
     this.createDate = createDate;
   }
 
-  public Company getCompany() {
+  public Farm getCompany() {
     return company;
   }
 
-  public void setCompany(Company company) {
+  public void setCompany(Farm company) {
     this.company = company;
   }
-
 }

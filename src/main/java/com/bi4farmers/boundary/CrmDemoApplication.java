@@ -1,4 +1,4 @@
-package com.mycompany.boundary;
+package com.bi4farmers.boundary;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;

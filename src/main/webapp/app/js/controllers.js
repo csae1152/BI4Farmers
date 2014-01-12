@@ -66,3 +66,15 @@ function CustomerDetailCtrl($scope, $location, $routeParams, Customer) {
   }
 
 }
+
+function CreateNewUser() {
+    
+    if ($location.path()==="/new") {
+        $scope.user = {
+            createUser : new User()
+        };
+    } else {
+            
+        };
+    }
+

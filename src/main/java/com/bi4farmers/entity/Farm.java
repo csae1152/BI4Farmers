@@ -1,18 +1,20 @@
-package com.mycompany.entity;
+package com.bi4farmers.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import lombok.Data;
 
 /**
- * Company entity, representing a company object that can be persisted to a
- * relational database and, at the same time, be used as a transfer object for
- * company entities that are used in the user interface.
+ * Farm entity, representing a company object that can be persisted to a
+ relational database and, at the same time, be used as a transfer object for
+ company entities that are used in the user interface.
  * 
  * @author Nils Preusker - n.preusker@gmail.com
  */
 @Entity
-public class Company {
+@Data
+public class Farm {
 
   @Id
   @GeneratedValue
@@ -22,10 +24,10 @@ public class Company {
   /**
    * Default constructor for JAX-RS (object <> JSON serialization)
    */
-  public Company() {
+  public Farm() {
   }
 
-  public Company(String name) {
+  public Farm(String name) {
     this.name = name;
   }
 
@@ -46,5 +48,5 @@ public class Company {
   public void setName(String name) {
     this.name = name;
   }
-
+  
 }

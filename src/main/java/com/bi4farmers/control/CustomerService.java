@@ -1,14 +1,18 @@
-package com.mycompany.control;
+package com.bi4farmers.control;
 
 import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
+import javax.persistence.NamedQuery;
 
-import com.mycompany.entity.Customer;
+import com.bi4farmers.entity.Customer;
 
 public class CustomerService {
+    
+    //@NamedQuery
+    
 
   @PersistenceContext
   private EntityManager entityManager;
@@ -22,7 +26,7 @@ public class CustomerService {
         "SELECT e FROM Customer e", Customer.class);
     return (List<Customer>) query.getResultList();
   }
-
+    
   public Customer findCustomerById(Long id) {
     return entityManager.find(Customer.class, id);
   }

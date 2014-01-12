@@ -1,4 +1,4 @@
-package com.mycompany.boundary;
+package com.bi4farmers.boundary;
 
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -20,8 +20,8 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 import javax.ws.rs.core.UriInfo;
 
-import com.mycompany.control.CustomerService;
-import com.mycompany.entity.Customer;
+import com.bi4farmers.control.CustomerService;
+import com.bi4farmers.entity.Customer;
 
 @Path("/customer")
 @Stateless

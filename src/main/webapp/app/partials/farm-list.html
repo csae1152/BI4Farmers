@@ -1,26 +1,40 @@
 <!-- partial for the customer overview page, shows a list of customers -->
 
+<!-- not necessary any more - was an old css selector for a heading
 <div class="row">
   <div class="span4">
-    <h2>Customer Overview</h2>
+  
   </div>
 </div>
+-->
+
+<ul class="nav nav-tabs">
+  <li class="active"><a href="#">Home</a></li>
+  <li><a href="#">Profile</a></li>
+  <li><a href="#">Messages</a></li>
+</ul>
+
+<div class="befriended_farms">
+          <h4>Farms who could help me</h4>
+</div>
+
 <form class="form-search">
   <input data-ng-model="searchString" type="text" class="input-medium search-query">
   <button data-ng-click="search()" data-ng-disabled="!searchString" type="submit" class="btn btn-primary">Search</button>
   <button data-ng-click="clearSearch()" data-ng-disabled="!filteredResults" type="submit" class="btn">Clear</button>
 </form>
+
 <div class="row">
   <div class="span12">
     <table class="table table-striped table-bordered">
       <thead>
         <tr>
-          <th>#</th>
-          <th>Customer name</th>
-          <th>Company</th>
-          <th>Email</th>
-          <th>Fon</th>
-          <th>Created</th>
+          <th>Farm name/owner</th>
+          <th>Deals with</th>
+          <th>Useful collobaration</th>
+          <th>Farm data</th>
+          <th>Useful for me</th>
+          <th>Contact data</th>
           <th colspan="2">Options</th>
         </tr>
       </thead>

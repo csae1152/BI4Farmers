@@ -5,15 +5,15 @@
 angular.module('CrmDemo', [ 'CrmDemo.filters', 'CrmDemo.services', 'CrmDemo.directives' ])
         .config([ '$routeProvider', function($routeProvider) {
             $routeProvider.when('/list', {
-                templateUrl : 'app/partials/customer-list.html',
+                templateUrl : 'app/partials/farm-list.html',
                 controller : CustomerListCtrl
             });
             $routeProvider.when('/edit/:customerId', {
-                templateUrl : 'app/partials/customer-detail.html',
+                templateUrl : 'app/partials/farm-detail.html',
                 controller : CustomerDetailCtrl
             });
             $routeProvider.when('/new', {
-                templateUrl : 'app/partials/customer-detail.html',
+                templateUrl : 'app/partials/farm-detail.html',
                 controller : CustomerDetailCtrl
             });
             $routeProvider.otherwise({

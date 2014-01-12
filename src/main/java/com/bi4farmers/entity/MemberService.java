@@ -10,9 +10,6 @@ package com.bi4farmers.entity;
  *
  * @author Helmut
  */
-
-
-
 import java.util.List;
 
 
@@ -22,7 +19,8 @@ import java.util.List;
  * 
  * @author Helmut Steiner
  */
-public interface FarmService {
+public interface MemberService 
+{
 
 	/**
 	 * Returns the {@link Customer} with the given id or {@literal null} if no {@link Customer} with the given id was
@@ -31,28 +29,29 @@ public interface FarmService {
 	 * @param id
 	 * @return
 	 */
-	Farm findById(Long id);
+	Member findById(Long id);
 
 	/**
 	 * Saves the given {@link Customer}.
 	 * 
-	 * @param farm
+	 * @param member
 	 * @return
 	 */
-	Farm save(Farm farm);
+	Member save(Member member);
 
 	/**
 	 * Returns all customers.
 	 * 
 	 * @return
 	 */
-	List<Farm> findAll();
+	List<Member> findAll();
 
 	/**
 	 * Returns the page of {@link Customer}s with the given lastname and the given page index and page size.
 	 * 
-	 * @param name
+	 * @param firstname
+         * @param lastname
 	 *  @return
 	 */
-	List<Farm> findByName(String name);
+	List<Member> findByName(String firstname, String lastname);
 }
